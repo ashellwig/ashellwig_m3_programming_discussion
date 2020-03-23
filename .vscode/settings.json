@@ -1,0 +1,108 @@
+{
+  /* Global Settings */
+  // Editor
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // Files
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "*.aux": true,
+    "*.bbl": true,
+    "*.bcf": true,
+    "*.blg": true,
+    "*.fdb_latexmk": true,
+    "*.fls": true,
+    "*.log": true,
+    "*.run.xml": true,
+    "*.synctex.gz": true,
+    "*.toc": true
+  },
+  /* Programming Languages */
+  // C/C++
+  "[cpp]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "C_Cpp.clang_format_style": "file",
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+  "C_Cpp.default.compilerArgs": [
+    "-Wall",
+    "-Wextra",
+    "-std=gnu++2a"
+  ],
+  // LaTeX
+  "[latex]": {
+    "editor.formatOnSave": false
+  },
+  "[bibtex]": {
+    "editor.formatOnSave": false
+  },
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk 🔃",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "latexmk (latexmkrc)",
+      "tools": [
+        "latexmk_rconly"
+      ]
+    },
+    {
+      "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    }
+  ],
+  "cSpell.words": [
+    "cout",
+    "iostream"
+  ]
+}
